@@ -11,7 +11,7 @@ function playGame () {
             alert("Игра окончена");
         }
         
-        if (isNaN(num)) {
+        if (!isNaN(parseFloat(num)) && isFinite(num) && String(num) === String(num).trim()) {
             alert("Введи число!");
             guessNumber();
             return;
